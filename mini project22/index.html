@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #ffe9e3;
+            padding: 20px;
+        }
+
+        .box {
+            width: 220px;
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px #ff9b73;
+        }
+
+        input {
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+            text-align: right;
+            border-radius: 10px;
+            border: none;
+            background: #fff4cc;
+            margin-bottom: 10px;
+            padding-right: 10px;
+        }
+
+        button {
+            width: 45px;
+            height: 45px;
+            margin: 3px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .num { background: #7fc8f8; }
+        .op { background: #ff8b8b; }
+        .eq { background: #8de6a4; width: 100px; }
+    </style>
+
+</head>
+<body>
+
+    <div class="box">
+        <input id="result" readonly>
+
+        <button class="num" onclick="add('1')">1</button>
+        <button class="num" onclick="add('2')">2</button>
+        <button class="num" onclick="add('3')">3</button>
+        <button class="op" onclick="add('+')">+</button><br>
+
+        <button class="num" onclick="add('4')">4</button>
+        <button class="num" onclick="add('5')">5</button>
+        <button class="num" onclick="add('6')">6</button>
+        <button class="op" onclick="add('-')">-</button><br>
+
+        <button class="num" onclick="add('7')">7</button>
+        <button class="num" onclick="add('8')">8</button>
+        <button class="num" onclick="add('9')">9</button>
+        <button class="op" onclick="add('*')">*</button><br>
+
+        <button class="num" onclick="add('0')">0</button>
+        <button class="op" onclick="add('/')">/</button>
+        <button class="eq" onclick="calculate()">=</button><br>
+
+        <button class="op" style="width:100%;" onclick="clearAll()">CLEAR</button>
+    </div>
+
+    <script>
+        function add(val){
+            document.getElementById('result').value += val;
+        }
+
+        function calculate(){
+            try {
+                document.getElementById('result').value =
+                    eval(document.getElementById('result').value);
+            } catch {
+                document.getElementById('result').value = "Error";
+            }
+        }
+
+        function clearAll(){
+            document.getElementById('result').value = "";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Counter App</title>
+
+    <style>
+        body {
+            background: #f0f0f0;
+            font-family: Arial;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .box {
+            background: white;
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 0 0 10px #bbb;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+            background: pink;
+            color: white;
+            border: none;
+            border-radius: 6px;
+        }
+
+        button:hover {
+            
+            background: black;
+        }
+
+        #count {
+            font-size: 40px;
+            color: red;
+            margin-top: 10px;
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="box">
+        <h2>Click Counter</h2>
+        <div id="count">0</div>
+        <button onclick="increase()">Click Me</button>
+    </div>
+
+    <script>
+        let counter = 0;
+
+        function increase() {
+            counter++;
+            document.getElementById("count").innerText = counter;
+        }
+    </script>
+
+</body>
+</html>
