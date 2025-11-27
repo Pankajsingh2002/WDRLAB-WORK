@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Click Counter App</title>
 
+
+      <!-- styling section   -->
     <style>
+
+
+        /* whole page background & center text  */
         body {
             background: #f0f0f0;
             font-family: Arial;
             text-align: center;
             margin-top: 80px;
         }
-
+            
+        /* white box container */
         .box {
             background: white;
             width: 300px;
@@ -21,6 +27,9 @@
             box-shadow: 0 0 10px #bbb;
             border-radius: 10px;
         }
+
+
+           /* button styling */
 
         button {
             padding: 10px 25px;
@@ -32,11 +41,15 @@
             border: none;
             border-radius: 6px;
         }
+          
+        /* button hover styling */
 
         button:hover {
             
             background: black;
         }
+           
+        /* counter number styling */
 
         #count {
             font-size: 40px;
@@ -52,17 +65,32 @@
 
 <body>
 
+          <!-- main counter box -->
     <div class="box">
         <h2>Click Counter</h2>
+
+              <!-- This shows the current count -->
         <div id="count">0</div>
+
+               <!-- Button calls increase() function when clicked -->
         <button onclick="increase()">Click Me</button>
     </div>
 
+
+        
     <script>
+
+        // counter variable starts from 0
         let counter = 0;
 
+
+        //    Funcction to increase counter when button is clicked 
         function increase() {
-            counter++;
+
+            //  Increase count by 1
+            counter++;    
+            
+                //   Update the displayed count 
             document.getElementById("count").innerText = counter;
         }
     </script>
