@@ -1,0 +1,10 @@
+/* 
+   Canvas ko center me rakhna 
+   Background color dark rakhna 
+*/
+canvas {
+    background: #222;         /* Dark game background */
+    display: block;           /* Canvas ko block element banata */
+    margin: 40px auto;        /* Center me lane ke liye */
+    border: 2px solid #fff;   /* White border for game look */
+}
